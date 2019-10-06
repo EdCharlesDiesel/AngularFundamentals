@@ -1,11 +1,13 @@
 <div class="well hoverwell thumbnail">
-    <h2>{{events.name}}</h2>
-    <div>Date: {{events.date}}</div>
-    <div>Time: {{events.time}}</div>
-    <div>Price: \${{events.price}}</div>
+    <h2>{{events?.name}}</h2>
+    <div>Date: {{events?.date}}</div>
+    <div>Time: {{events?.time}}</div>
+    <div>Price: R{{events?.price}}</div>
     <div>
-        <span>Location: {{events.location.address}}</span>
-        <span class="pad-left">{{events.location.city}}, {{events.location.country}}</span>
+        <span>Location: {{events?.location?.address}}</span>
+        <span class="pad-left">{{events?.location?.city}}, {{events?.location?.country}}</span>
     </div>
-    <!-- <button class="btn btn-primary" (click)="handleclickMe()">Click Me</button> -->
+    <div>
+        olnline URL:{{events?.onlineUrl}}
+    </div>
 </div>
