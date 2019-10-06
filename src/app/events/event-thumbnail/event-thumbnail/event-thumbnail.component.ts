@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core'
         <span *ngSwitchCase="'10:00 am'">(Late Start)</span>
         <span *ngSwitchDefault>(Normal Start)</span>
       </div>
-      <div>Price: \${{event?.price}}</div>
+      <div>Price: \R{{event?.price}}</div>
       <div *ngIf="event?.location">
         <span>Location: {{event?.location?.address}}</span>
         <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
@@ -23,11 +23,12 @@ import { Component, Input } from '@angular/core'
   `
 })
 export class EventThumbnailComponent {
-  @Input() event:any
+  @Input() event: any;
 
-  getStartTimeStyle():any {
-    if (this.event && this.event.time === '8:00 am')
-      return {color: '#003300', 'font-weight': 'bold'}
-    return {}
+  getStartTimeStyle(): any {
+    if (this.event && this.event.time === '8:00 am') {
+      return {color: '#003300', 'font-weight': 'bold'};
+    }
+    return {};
   }
 }
