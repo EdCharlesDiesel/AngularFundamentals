@@ -14,7 +14,7 @@ export class EventsListComponent {
     price: 599.99,
     imageUrl: '/assets/images/angularconnect.png',
     location: {
-      address: '2450 BZone 9',
+      address: '2450 B Zone 9',
       city: 'Soweto',
       country: 'South Africa'
     }
